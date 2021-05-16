@@ -37,24 +37,6 @@ class assert {
   }
 }
 
-const assertNew = function() {
-  this.result = null;
-
-  return {
-    equals: function() {
-      this.result = arguments[0];
-      return this;
-    },
-
-    toBe: function (expectedValue) {
-      const actualResult = this.result === expectedValue;
-      return this;
-    }
-  }
-
-  return this.result;
-}
-
 suite('example test suite', () => {
   test('should equal true', () => {
     assert.equals(1 == 1).toBe(true);
